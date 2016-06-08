@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+    <style>
+        html {
+            background: #b0c4de;
+        }
+        
+        .callout {
+            text-align: center;
+            color: white;
+            text-shadow: rgba(0, 0, 0, 0.5) 0 2px;
+            background-color: #d6a000;
+            position: absolute;
+            left: 50%;
+            width: 550px;
+            margin-left: -275px;
+            padding: 10px 0 10px 0;
+            border-radius: 10px;
+            -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .grid {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            margin-left: -200px;
+            width: 415px;
+        }
+        
+        .cell {
+            display: inline-block;
+            background-color: #d2b48c;
+            height: 20px;
+            width: 20px;
+            border-radius: 2px;
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+            -webkit-transition: background-color 300ms ease-in;
+        }
+        
+        .cell:hover {
+            cursor: pointer;
+            background-color: #4682b4;
+            -moz-box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+            -webkit-box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+            box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+        }
+        
+        input:checked + .cell {
+            background-color: #87ceeb;
+            -moz-box-shadow: inset 0 0px 3px 1px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: inset 0 0px 3px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0px 3px 1px rgba(0, 0, 0, 0.5);
+        }
+        
+        input:checked + .cell:hover {
+            background-color: #4682b4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-->
+    <svg width="401" height="401" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="smallGrid" class="hidden cell" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="gray" stroke-width="0.5" />
+            </pattern>
+            <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                <rect width="100" height="100" fill="url(#smallGrid)" />
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1" />
+            </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+    </!-->
+
+    <div class="grid">
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+        <input type="checkbox" id="cell1" class="hidden" />
+        <label for="cell1" class="cell"></label>
+        <input type="checkbox" id="cell2" class="hidden" />
+        <label for="cell2" class="cell"></label>
+        <input type="checkbox" id="cell3" class="hidden" />
+        <label for="cell3" class="cell"></label>
+        <input type="checkbox" id="cell4" class="hidden" />
+        <label for="cell4" class="cell"></label>
+        <input type="checkbox" id="cell5" class="hidden" />
+        <label for="cell5" class="cell"></label>
+        <input type="checkbox" id="cell6" class="hidden" />
+        <label for="cell6" class="cell"></label>
+        <input type="checkbox" id="cell7" class="hidden" />
+        <label for="cell7" class="cell"></label>
+        <input type="checkbox" id="cell8" class="hidden" />
+        <label for="cell8" class="cell"></label>
+        <input type="checkbox" id="cell9" class="hidden" />
+        <label for="cell9" class="cell"></label>
+        <input type="checkbox" id="cell10" class="hidden" />
+        <label for="cell10" class="cell"></label>
+        <input type="checkbox" id="cell11" class="hidden" />
+        <label for="cell11" class="cell"></label>
+        <input type="checkbox" id="cell12" class="hidden" />
+        <label for="cell12" class="cell"></label>
+        <input type="checkbox" id="cell13" class="hidden" />
+        <label for="cell13" class="cell"></label>
+        <input type="checkbox" id="cell14" class="hidden" />
+        <label for="cell14" class="cell"></label>
+        <input type="checkbox" id="cell15" class="hidden" />
+        <label for="cell15" class="cell"></label>
+        <br>
+
+    </div>
+</body>
+
+</html>
