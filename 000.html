@@ -13,42 +13,83 @@
         }
         
         .title {
-            background-color: rgba(128, 255, 212, 0.8);
+            background-color: rgba(128, 255, 212, 0.5);
             border-radius: 2px;
         }
         
-        .info {
-            background-color: rgba(128, 255, 240, 0.5);
+        .infoi {
+            background-color: rgba(128, 255, 240, 0.4);
             border-radius: 5px;
         }
         
         #myCarousel {
-            height: 500px;
+            height: 450px;
         }
         
-        img {
-            margin: 0px auto;
-            display: block;
+        .box {
+            height: 110px;
+            position: relative;
         }
+        
+        .content {
+            position: absolute;
+            bottom: 0;
+            right: 200px;
+        }
+        
         #play {
             height: 500px;
         }
         
-        #upclue {
-            position: absolute;
+        #clue {
+            position: relative;
             left: 50%;
-            top: 1500px;
-            margin-left: -130px;
+            margin-left: -75px;
+            width: 300px;
+            height: 100px;
+        }
+        
+        #main {
+            position: relative;
+            left: 50%;
+            margin-left: -175px;
+            width: 420px;
+        }
+        
+        .congrats {
+            position: relative;
+            visibility: hidden;
+            top: 250px;
+            left: 50%;
+            margin-left: -250px;
+            width: 550px;
+            height: 100px;
+        }
+        
+        div.btn {
+            position: relative;
+            top: 20px;
+            left: 50%;
+            margin-left: -150px;
             width: 300px;
             height: 150px;
         }
         
-        #main {
-            position: absolute;
-            top: 1620px;
+        #result {
+            position: relative;
+            top: 20px;
             left: 50%;
-            margin-left: -250px;
-            width: 420px;
+            margin-left: -150px;
+            width: 300px;
+            height: 150px;
+            align-content: center;
+            display: block;
+        }
+        
+        img {
+            width: 700px;
+            margin: 0px auto;
+            display: block;
         }
         
         .col-centered {
@@ -67,6 +108,7 @@
             border: 0.5px solid #303030;
             background-color: rgb(255, 255, 220);
             float: left;
+            text-align: center;
             box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
             -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
             -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
@@ -83,8 +125,9 @@
         }
         
         div.upclue {
+            text-align: center;
             width: 20px;
-            height: 120px;
+            height: 100px;
             border-radius: 2px;
             border: 0.5px solid #969696;
             background-color: rgba(255, 194, 224, 0.8);
@@ -95,7 +138,9 @@
         }
         
         div.leftclue {
-            width: 120px;
+            text-align: right;
+            letter-spacing: 2px;
+            width: 100px;
             height: 20px;
             border-radius: 2px;
             border: 0.5px solid #969696;
@@ -104,6 +149,19 @@
             box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
             -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
             -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1.cong {
+            transform-origin: 50% 50%;
+            font-size: 80px;
+            color: #3da1d1;
+            text-shadow: 5px 8px rgba(150, 150, 150, 0.5);
+            font-family: 'Sigmar One', cursive;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -126,38 +184,14 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Some Links<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Nonogram">Nonogram wiki</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+                            <li><a href="http://www.nonograms.org/">Nonogram.org</a></li>
+                            <li><a href="http://en.japonskie.ru/">Brain games online</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -171,11 +205,11 @@
         <div class="jumbotron title">
             <h1>Nonogram</h1>
             <p>An interesting logic game.</p>
-            <p><a class="btn btn-primary btn-lg" href="#info" role="button">Learn more</a></p>
+            <p><a class="btn btn-primary btn-lg" href="#infoi" role="button">Learn more</a></p>
         </div>
     </div>
-    <div class="container-fluid" id="info">
-        <div class="jumbotron info">
+    <div class="container-fluid" id="infoi">
+        <div class="jumbotron infoi">
             <p>Nonograms, also known as Hanjie, Picross or Griddlers, are picture logic puzzles in which cells in a grid must
                 be colored or left blank according to numbers at the side of the grid to reveal a hidden picture. In this
                 puzzle type, the numbers are a form of discrete tomography that measures how many unbroken lines of filled-in
@@ -191,7 +225,7 @@
         </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel slide" data-ride="carousel" id="myCarousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -231,8 +265,8 @@
             </div>
             <div class="item">
                 <img class="ninth-slide" src="images/09.jpg" width="50%" height="30%" alt="slide">
-                <div class="container">
-                    <div class="carousel-caption">
+                <div class="container box">
+                    <div class="carousel-caption content">
                         <p><a class="btn btn-lg btn-primary toright" href="#play" role="button">Try now</a></p>
                     </div>
                 </div>
@@ -249,57 +283,194 @@
         </a>
     </div>
 
-    <div class="container fluid" id="play">
-        <div id="upclue">
+    <div class="container" id="play">
+        <div class="congrats">
+            <h1 class="cong">Congratulations!</h1>
+        </div>
+        <div id="clue">
         </div>
         <div id="main">
+        </div>
+        <div class="btn">
+            <button type="button" class="btn btn-info" id="check">Check Answer</button>
+            <button type="button" class="btn btn-info" id="show">Show Answer</button>
+            <button type="button" class="btn btn-info" id="reset">Reset</button>
+            <span id="result"></span>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-        <script>
-    $(document).ready(function() { 
-        for (i = 0; i <= 15; i++) { 
-            var row=$ ('<div>').attr('class', 'row'); 
-            for (j=0 ; j <= 15; j++) { 
-                if (i == 0 && j == 0) { 
-                } else if (i == 0) {
-                    var upclue=$ ('<div>').attr('class', 'upclue'); 
-                    $(upclue).attr('data-j', j); 
-                    $(row).append($(upclue));
-                } else if (j == 0){
-                    var leftclue = $('<div>').attr('class', 'leftclue'); 
-                    $(leftclue).attr('data-i', i); 
-                    $(row).append($(leftclue)); 
+    <script>
+        var addclue = function() {
+            var up = [$('div.upclue[data-j=1]').text('\n\n3\n3\n3'),
+                $('div.upclue[data-j=2]').text('1\n3\n2\n3\n1'),
+                $('div.upclue[data-j=3]').text('\n1\n2\n1\n1'),
+                $('div.upclue[data-j=4]').text('2\n1\n2\n1\n1'),
+                $('div.upclue[data-j=5]').text('\n1\n1\n4\n1'),
+                $('div.upclue[data-j=6]').text('\n1\n1\n1\n3'),
+                $('div.upclue[data-j=7]').text('\n1\n1\n1\n1'),
+                $('div.upclue[data-j=8]').text('\n2\n1\n3\n2'),
+                $('div.upclue[data-j=9]').text('\n\n\n7\n7'),
+                $('div.upclue[data-j=10]').text('\n2\n1\n2\n1'),
+                $('div.upclue[data-j=11]').text('\n\n1\n3\n1'),
+                $('div.upclue[data-j=12]').text('\n\n3\n2\n1'),
+                $('div.upclue[data-j=13]').text('\n\n2\n2\n1'),
+                $('div.upclue[data-j=14]').text('\n\n\n1\n2'),
+                $('div.upclue[data-j=15]').text('\n\n\n\n4')
+            ];
+            var left = [$('div.leftclue[data-i=1]').text('3 2'),
+                $('div.leftclue[data-i=2]').text('1 7'),
+                $('div.leftclue[data-i=3]').text('1 2'),
+                $('div.leftclue[data-i=4]').text('2 1 2'),
+                $('div.leftclue[data-i=5]').text('1 2 1'),
+                $('div.leftclue[data-i=6]').text('1 1'),
+                $('div.leftclue[data-i=7]').text('1 2'),
+                $('div.leftclue[data-i=8]').text('7 3'),
+                $('div.leftclue[data-i=9]').text('2 1 3 2'),
+                $('div.leftclue[data-i=10]').text('1 1 1 2'),
+                $('div.leftclue[data-i=11]').text('2 1 3 3'),
+                $('div.leftclue[data-i=12]').text('4 5 1'),
+                $('div.leftclue[data-i=13]').text('2 2 2 1 1'),
+                $('div.leftclue[data-i=14]').text('1 2 4 2'),
+                $('div.leftclue[data-i=15]').text('2 2 6')
+            ];
+            for (var i = 0; i < 15; i++) {
+                up[i].html(up[i].html().replace(/\n/g, '<br/>'));
+            }
+            };
+
+            var tagok = function() {
+            var ok = [
+                [0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+                [1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
+                [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+                [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+                [1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0],
+                [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0],
+                [1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1],
+                [0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1],
+                [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1],
+                [1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0],
+            ];
+            $.each(ok, function(i, row) {
+                $.each(row, function(j, value) {
+                var cell = $('div.grid[data-i=' + (i + 1) + '][data-j=' + (j + 1) + ']');
+                if (value == 1)
+                    $(cell).attr('ans', 'ok');
+                else
+                    $(cell).attr('ans', 'notok');
+                });
+            });
+        }
+
+        var check = function() {
+            console.log("check");
+            var notok = $('div.grid[ans="notok"]');
+            for (i = 0; i < notok.length; i++) {
+                var color = $(notok[i]).css('background-color');
+                if (color == 'rgb(244, 166, 98)') {
+                console.log('notok : ' + i);
+                return 'There are some errors!';
+                }
+            }
+            var ok = $('div.grid[ans="ok"]');
+            for (i = 0; i < ok.length; i++) {
+                var color = $(ok[i]).css('background-color');
+                if (color == 'rgb(173, 173, 173)') {
+                    console.log('ok : ' + i);
+                    return 'There are some errors!';
+                } else if (color == 'rgb(255, 255, 220)') {
+                    console.log('ok : ' + i);
+                    return 'Not finish yet!';
+                }
+            }
+            return true;
+        };
+
+        var btn = function() {
+            $('#reset').bind('click', function() {
+                $('div.grid').each(function() {
+                $('.congrats').css('visibility', 'hidden');
+                $('#result').text("");
+                $(this).css('background-color', 'rgb(255, 255, 220)');
+                $(this).text("");
+                });
+            });
+            $('#show').bind('click', function() {
+                $('#result').text("");
+                $('div.grid').each(function() {
+                if ($(this).attr('ans') == 'ok') {
+                    $(this).css('background-color', 'rgb(244, 166, 98)');
+                    $(this).text("");
                 } else {
-                    // 產生一個 div 背影色 
-                    var cell = $('<div>').attr('class', 'grid'); 
-                    $(cell).attr('data-i', i); 
-                    // 將綁定格子 click 事件 
-                    $(cell).bind('click', function() { 
-                        // 將目前的 cell 背景色的 css 取出來 
-                        var color=$ (this).css('background-color'); 
-                        console.log(color); 
-                        // 判斷是否是白色 
-                        if (color=='rgb(255, 255, 220)') {
-                            $(this).css('background-color', 'rgb(244, 166, 98)'); 
-                        } else if (color=='rgb(244, 166, 98)' ) { 
-                            $(this).css('background-color', 'rgb(173, 173, 173)'); 
-                        } else { 
-                            $(this).css('background-color', 'rgb(255, 255, 220)'); 
-                        } 
-                    }); 
-                    $(row).append($(cell)); 
-                }// else 
-            } // for j 
-            if (i == 0) { 
-                $(row).appendTo('div#upclue');
-            } else { 
-                $(row).appendTo('div#main'); 
-            } 
-        } // for i 
-    });
+                    $(this).css('background-color', 'rgb(255, 255, 220)');
+                    $(this).text("");
+                }
+                });
+            });
+            $('#check').bind('click', function() {
+                if (check() == true) {
+                    $('#result').text("");
+                $('.congrats').css('visibility', 'visible');
+                }else {
+                    $('#result').text(check());
+                }
+            });
+        }
+
+        var genGrid = function() {
+            for (i = 0; i <= 15; i++) {
+                var row = $('<div>').attr('class', 'row');
+                for (j = 0; j <= 15; j++) {
+                if (i == 0 && j == 0) {} else if (i == 0) {
+                    var upclue = $('<div>').attr('class', 'upclue');
+                    $(upclue).attr('data-j', j);
+                    $(row).append($(upclue));
+                } else if (j == 0) {
+                    var leftclue = $('<div>').attr('class', 'leftclue');
+                    $(leftclue).attr('data-i', i);
+                    $(row).append($(leftclue));
+                } else {
+                    var cell = $('<div>').attr('class', 'grid');
+                    $(cell).attr('data-i', i);
+                    $(cell).attr('data-j', j);
+                    $(cell).bind('click', function() {
+                    var color = $(this).css('background-color');
+                    if (color == 'rgb(255, 255, 220)') {
+                        $(this).css('background-color', 'rgb(244, 166, 98)');
+                    } else if (color == 'rgb(244, 166, 98)') {
+                        $(this).text('X');
+                        $(this).css('background-color', 'rgb(173, 173, 173)');
+                    } else {
+                        $(this).text('');
+                        $(this).css('background-color', 'rgb(255, 255, 220)');
+                    }
+                    console.log($(this).attr('data-i'));
+                    console.log($(this).attr('data-j'));
+                    });
+                    $(row).append($(cell));
+                }
+                }
+                if (i == 0) {
+                $(row).appendTo('div#clue');
+                } else {
+                $(row).appendTo('div#main');
+                }
+            }
+        };
+
+        $(document).ready(function() {
+        genGrid();
+        addclue();
+        tagok();
+        btn();
+        });
     </script>
     <script>$('.carousel').carousel({interval: 8000})</script>
 
