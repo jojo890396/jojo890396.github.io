@@ -373,23 +373,29 @@
         var check = function() {
             console.log("check");
             var notok = $('div.grid[ans="notok"]');
+            var error = false;
+            var notfinish = false;
             for (i = 0; i < notok.length; i++) {
                 var color = $(notok[i]).css('background-color');
                 if (color == 'rgb(244, 166, 98)') {
-                console.log('notok : ' + i);
-                return 'There are some errors!';
+                    $(notok[i]).css('background-color', 'rgb(255, 0, 0)');
+                    error = true;
                 }
             }
             var ok = $('div.grid[ans="ok"]');
             for (i = 0; i < ok.length; i++) {
                 var color = $(ok[i]).css('background-color');
                 if (color == 'rgb(173, 173, 173)') {
-                    console.log('ok : ' + i);
-                    return 'There are some errors!';
+                    $(ok[i]).css('background-color', 'rgb(255, 0, 0)');
+                    error = true;
                 } else if (color == 'rgb(255, 255, 220)') {
-                    console.log('ok : ' + i);
-                    return 'Not finish yet!';
+                    notfinish = true;
                 }
+            }
+            if (error) {
+                return 'There are some errors!';
+            } else if (notfinish) {
+                    return 'Not finish yet!';
             }
             return true;
         };
